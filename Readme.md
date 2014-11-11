@@ -14,3 +14,10 @@ Uses the Picasa Web API to fetch, and feh to display the images.
    ```
    bindsym Control+Return exec --no-startup-id "cd <path-to-cloned-repo>; ./emergency-run.sh"
    ```
+
+## Tips
+You can use the same account for both user logins that have to be specified in ``config``.
+But if you want to control which albums and pictures are used for your background,
+consider creating a second Google+ user, and sharing only such pictures that you
+want to see as wallpapers with that user. Use the login information for this user for
+the first two fields in the config file, and your primary user email for the third field.
