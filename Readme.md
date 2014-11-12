@@ -14,6 +14,7 @@ Uses the Picasa Web API to fetch, and feh to display the images.
 4. schedule loading the next brackground, e.g. via crontab every 5 minutes
    ```
    */5 * * * *     cd <path-to-cloned-repo>; ./run.py
+   @reboot	   cd <path-to-cloned-repo>; ./run.py
    ```
 5. optionally add an emergency hotkey to display default image and start loading next background, e.g. with i3 window manager
    ```
