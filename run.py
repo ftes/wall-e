@@ -3,8 +3,11 @@ import gdata.photos.service
 import random
 import subprocess
 import configobj
+import os.path
 
-config = configobj.ConfigObj("config")
+path = os.path.dirname(os.path.abspath(__file__))
+
+config = configobj.ConfigObj(path + "/config")
 email=config["google_login_email"]
 password=config["google_login_password"]
 other_email=config["google_photos_login_email"]
@@ -36,4 +39,4 @@ photos = gd_client.GetFeed(
 
 chosen_photo = photos.entry[n]
 photo_url = chosen_photo.content.src
-process = subprocess.call(["./set-wallpaper.sh", photo_url])
+process = subprocess.call([path + "/download-and-set-wallpaper.sh", photo_url])

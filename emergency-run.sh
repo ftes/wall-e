@@ -1,4 +1,5 @@
 #!/bin/bash
-source config
-DISPLAY=:0.0 feh --bg-fill $default_image
-./run.py
+my_dir=`dirname $0`
+source $my_dir/config
+$my_dir/set-wallpaper.sh $default_image
+$my_dir/run.py

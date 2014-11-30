@@ -8,17 +8,16 @@ Uses the Picasa Web API to fetch, and feh to display the images.
   * python2
   * feh
   * python-configobj
-  * google data python lib v1
+  * [google data python lib v1](https://developers.google.com/gdata/articles/python_client_lib?csw=1#linux)
 2. clone the repo
 3. add your login details, the user from which to load the photos, and a default wallpaper in the ``config`` file
 4. schedule loading the next brackground, e.g. via crontab every 5 minutes
    ```
-   */5 * * * *     cd <path-to-cloned-repo>; ./run.py
-   @reboot	   cd <path-to-cloned-repo>; ./run.py
+   */5 * * * *     <path-to-cloned-repo>/run.py
    ```
 5. optionally add an emergency hotkey to display default image and start loading next background, e.g. with i3 window manager
    ```
-   bindsym Control+Return exec --no-startup-id "cd <path-to-cloned-repo>; ./emergency-run.sh"
+   bindsym Control+Return exec --no-startup-id "<path-to-cloned-repo>/emergency-run.sh"
    ```
 
 ## Tips
